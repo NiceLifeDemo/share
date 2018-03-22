@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.techrc.mapper.LogMapper">
+
+    <select id="getLogInfo" resultType="com.techrc.vo.CommonLogVO">
+
+        select * from rc_normal_log
+
+    </select>
+
+
+    <insert id="addLogInfo" parameterType="com.techrc.model.CommonLog">
+        insert into rc_normal_log (tag,content  )
+        values (#{tag}, #{content} )
+    </insert>
+
+</mapper>
