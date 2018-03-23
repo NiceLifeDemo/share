@@ -16,4 +16,18 @@
         values (#{realName}, #{password},#{phoneNo} )
     </insert>
 
+
+    <select id="findUserBySome" resultType="com.techrc.model.User">
+
+       select * from rc_system_user limit 0,1
+
+    </select>
+
+
+
+    <select id="findUserByBNameAndPassword" parameterType="java.lang.String"  resultType="com.techrc.model.User">
+
+       select * from rc_system_user WHERE realName='${realName}' and password='${password}' limit 0,1
+
+    </select>
 </mapper>

@@ -15,7 +15,41 @@ package com.techrc.model;
      @ApiModelProperty("电话")
       private String phoneNo;
 
-   public String getRealName()
+     public String getTheme() {
+         return theme;
+     }
+
+     public void setTheme(String theme) {
+         this.theme = theme;
+     }
+
+     public String getAvatar() {
+         return avatar;
+     }
+
+     public void setAvatar(String avatar) {
+         this.avatar = avatar;
+     }
+
+     @ApiModelProperty("邮箱")
+
+     private  String email;
+
+     @ApiModelProperty("主题")
+     private  String theme;
+
+     @ApiModelProperty("头像")
+     private  String avatar;
+
+     public String getEmail() {
+         return email;
+     }
+
+     public void setEmail(String email) {
+         this.email = email;
+     }
+
+     public String getRealName()
    {
      return this.realName;
  }
