@@ -3,7 +3,9 @@
  import com.techrc.dto.CommLogDTO;
  import com.techrc.mapper.LogMapper;
  import com.techrc.model.CommonLog;
+ import com.techrc.model.RedisModel;
  import com.techrc.service.LogService;
+ import com.techrc.service.redis.RedisServiceImpl;
  import com.techrc.vo.CommonLogVO;
  import io.swagger.annotations.ApiOperation;
  import java.util.List;
@@ -25,6 +27,9 @@ private LogMapper logMapper;
 
  @Autowired
  private LogService logService;
+
+ @Autowired
+ private RedisServiceImpl service;
 
  @PostMapping({"addLog"})
  @ApiOperation(value="新增日志", tags={"日志"})
